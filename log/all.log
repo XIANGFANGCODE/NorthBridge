@@ -1,0 +1,4 @@
+2019-05-07 15:22:35,705 - scaffold.py - DEBUG : it is debug
+2019-05-07 15:22:35,705 - scaffold.py - INFO : it is info
+2019-05-07 15:22:35,705 - scaffold.py - ERROR : it is error
+2019-05-07 15:22:35,705 - scaffold.py - CRITICAL : it is critical

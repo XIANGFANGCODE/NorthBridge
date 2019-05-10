@@ -1,0 +1,9 @@
+[tushare]
+tushare_token=b6cfaa6e891f3b8474874bd565cd395354e8f7d5b87d1d6af898aecc
+
+[logging]
+logging_level=DEBUG
+
+[alpha]
+moving_average_short = 5
+moving_average_long = 30
