@@ -33,7 +33,7 @@ class SignalMA(Signal):
 
     def __init__(self, id, object, action, price, datetime,
                  pre_short_ma, pre_long_ma, short_ma, long_ma):
-        Signal.__init__(self,id, object, action, price, datetime)
+        Signal.__init__(self, id, object, action, price, datetime)
         self.pre_short_ma = pre_short_ma
         self.pre_long_ma = pre_long_ma
         self.short_ma = short_ma

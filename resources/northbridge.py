@@ -1,5 +1,6 @@
 from flask_restful import Resource, reqparse, abort
 from resources.alpha import Alpha
+from resources.account import Account
 from resources.evaluator import Evaluator
 from common.scaffold import *
 
@@ -17,7 +18,7 @@ class NorthBridge(Resource):
         """
         if args is None:
             raise RuntimeError('args is none')
-        ret = self.__excute('demo', config, args)
+        ret = self.__excute('test', config, args)
         return ret
 
     def __excute(self, mode, config, args):
@@ -28,9 +29,8 @@ class NorthBridge(Resource):
         :param args:
         :return:
         """
-
-        alpha = Alpha(mode)
         evaluator = Evaluator()
+        alpha = Alpha(mode)
         signals = alpha.moving_average(short_num=config['moving_average_short'],
                                        long_num=config['moving_average_long'],
                                        object=args['object'],
@@ -38,6 +38,12 @@ class NorthBridge(Resource):
         if len(signals) == 0:
             logging.info("There is no signals!")
             return evaluator
+
+        account = Account(mode)
+        account.get_account(exchange=args['exchange'],
+                            datetime=signals[0].datetime,   # 从第一个信号开始
+                            object='ustd',
+                            start_account=config['start_account'])
 
 
 

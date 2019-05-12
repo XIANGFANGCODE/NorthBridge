@@ -29,7 +29,7 @@ def parse_config():
     cf.read(d)
 
     # tushare
-    config['tushare_token'] = cf.get('tushare','tushare_token')
+    config['tushare_token'] = cf.get('tushare', 'tushare_token')
 
     return config
 
@@ -70,12 +70,12 @@ def get_id(id_type):
 
 #定义各类常量
 ID_TYPE = {
-    'signal' : 1000000
+    'signal': 1000000
 }
 
 TUSHARE_DATA_TYPE = {
-    'seq' : 0,
-    'date' : 1,
-    'price' : 2,
-    'volume' : 3
+    'seq': 0,
+    'date': 1,
+    'price': 2,
+    'volume': 3
 }
