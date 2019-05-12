@@ -8,14 +8,11 @@ def parse_config():
     :return: 返回一个字典，包含所有的配置文件信息
     """
     config = dict()
-    d = path.join(path.dirname(path.dirname(path.realpath(__file__))),'config','config') #获取当前文件所在目录
+    d = path.join(path.dirname(path.dirname(path.realpath(__file__))), 'config', 'config') #获取当前文件所在目录
     if not path.exists(d):
         raise RuntimeError("config file is not exist")
-    cf  = configparser.ConfigParser()
+    cf = configparser.ConfigParser()
     cf.read(d)
-
-    # tushare
-    config['tushare_token'] = cf.get('tushare','tushare_token')
 
     # log
     config['logging_level'] = cf.get('logging','logging_level')
@@ -24,6 +21,15 @@ def parse_config():
     config['moving_average_short'] = cf.get('alpha','moving_average_short')
     config['moving_average_long'] = cf.get('alpha','moving_average_long')
 
+    # account
+    config['start_account'] = cf.get('account', 'start_account')
+
+    d = path.join(path.dirname(path.dirname(path.realpath(__file__))), 'config', 'exchange_config') #获取交易所配置文件
+    cf = configparser.ConfigParser()
+    cf.read(d)
+
+    # tushare
+    config['tushare_token'] = cf.get('tushare','tushare_token')
 
     return config
 
