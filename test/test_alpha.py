@@ -11,6 +11,7 @@ class MyTestCase(unittest.TestCase):
                              long_num=30,
                              object='btc',
                              exchange='tushare')
+        print(len(signals))
         for i in range(10):
             print(signals[i].desc())
         self.assertGreaterEqual(len(signals), 0)

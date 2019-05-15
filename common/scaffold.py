@@ -49,8 +49,8 @@ def format_logging(config):
     f1 = logging.FileHandler(path.join(path.dirname(path.dirname(path.realpath(__file__))),'log','all.log'))
     f2 = logging.FileHandler(path.join(path.dirname(path.dirname(path.realpath(__file__))), 'log', 'error.log'))
     f2.setLevel(logging.ERROR)
-    format1 = logging.Formatter('%(asctime)s - %(filename)s - %(levelname)s : %(message)s')
-    format2 = logging.Formatter('%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s : %(message)s')
+    format1 = logging.Formatter('%(asctime)s - %(filename)s - %(funcName)s - %(levelname)s : %(message)s')
+    format2 = logging.Formatter('%(asctime)s - %(filename)s - %(funcName)s[line:%(lineno)d] - %(levelname)s : %(message)s')
     f1.setFormatter(format1)
     f2.setFormatter(format2)
     logger.addHandler(f1)
@@ -67,15 +67,50 @@ def get_id(id_type):
     seq = 1
     return ID_TYPE[id_type] + 1
 
+def get_basic_currency(object):
+    return BASIC_CURRENCY[OBJECT_TYPE[object]]
 
-#定义各类常量
+def get_value_from_dict(dict, *args):
+    """
+    方便从多级dict中获取特定value，同时做合法性检查，以免抛出KeyError异常
+    :param dict: 字典
+    :param args: 可变参数
+    :return:
+    """
+    if dict is None:
+        return None
+    value = dict
+    for i in args:
+        value = value.get(i)
+        if value is None:
+            return value
+    return value
+
+################################################
+# 定义各类常量                                   #
+################################################
+
+# ID类型
 ID_TYPE = {
     'signal': 1000000
 }
 
+# tushare pandas返回数据列顺序
 TUSHARE_DATA_TYPE = {
     'seq': 0,
     'date': 1,
     'price': 2,
     'volume': 3
 }
+
+# 标的分类，分为加密货币，和其他，同时区分基准货币为ustd和cny
+OBJECT_TYPE = {
+    'btc': 'crypto_currency',
+    'eth': 'crypto_currency'
+}
+
+BASIC_CURRENCY = {
+    'crypto_currency': 'ustd'
+}
+
+

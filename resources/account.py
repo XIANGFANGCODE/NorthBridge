@@ -1,27 +1,48 @@
 import logging
 
-class Account:
+class SpotAccount:
     """
-    资金账户类，用以现实所有的资产
-    数据模型为一个2级字典，value = dict[exchange][object]
-    结构如下
-        {
+    现货账户
+    数据模型为一个2级字典
+            {
             "tushare" : {
-                "ustd" : "100",
-                "btc" : "1",
-                "eth" : "2"
-            },
-            "huobi" : {
-                "ustd" : "1000",
-                "btc" : "2",
-                "eth" : "3"
+                "btc" : 100,
+                "eth" : 200
+                }
+        }
+    """
+    def __init__(self):
+        self.account = dict()
+
+class FuturesAccount:
+    """
+    合约/期货账户，类似如下的一个2级字典
+            {
+            "tushare" : {
+                "btc" : {
+                    "action" : "sell",
+                    "price" : 1000,
+                    "value" : 100
+                    },
             }
         }
     """
+    def __init__(self):
+        self.account = dict()
+
+
+class Account:
+    """
+    资金账户类，用以现实所有的资产
+    数据模型为一个3级字典
+    结构如下
+    注意区分现货和期货
+    """
     def __init__(self, mode):
         self.mode = mode
-        self.account = dict()
         self.datetime = ""
+        self.spot_account = SpotAccount()
+        self.futures_account = FuturesAccount()
 
     def get_account(self, exchange, datetime, object, start_account=100000):
         """
@@ -33,24 +54,35 @@ class Account:
         """
         self.datetime = datetime
         if self.mode == 'test':
-            self.account = self._get_test_account(exchange, object, start_account)
+            self.spot_account, _ = self._get_test_account(exchange, object, start_account)
         elif self.mode == 'real':
-            self.account = self._get_real_account(exchange)
+            self.spot_account, _ = self._get_real_account(exchange)
         else:
             logging.error("account has no mode {}.".format(self.mode))
         return self
 
     def _get_test_account(self, exchange, object, start_account):
-        self.account[exchange] = dict()
-        self.account[exchange][object] = start_account
-        return self.account
+        # 测试账户只有现货基准币种
+        self.spot_account.account[exchange] = dict()
+        self.spot_account.account[exchange][object] = start_account
+        return self.spot_account, self.futures_account
 
     def _get_real_account(self, exchange):
-        return self.account
+        return self.spot_account, self.futures_account
 
     def desc(self):
         print("mode: {}, datetime: {}".format(self.mode, self.datetime))
-        for key in self.account:
+        print("spot account: ")
+        for key in self.spot_account.account:
             print("exchange: " + key)
-            for i in self.account[key]:
-                print("object: {}, value: {}".format(i, self.account[key][i]))
+            for i in self.spot_account.account[key]:
+                print("object: {}, value: {}".format(i, self.spot_account.account[key][i]))
+        print("futures account: ")
+        for key in self.futures_account.account:
+            print("exchange: " + key)
+            for i in self.futures_account.account[key]:
+                print("object: " + i)
+                print("action: {}, price: {}, value: {}".
+                      format(self.futures_account.account[key][i]['action'],
+                             self.futures_account.account[key][i]['price'],
+                             self.futures_account.account[key][i]['value']))
