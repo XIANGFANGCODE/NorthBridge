@@ -16,14 +16,17 @@ class SpotAccount:
 
 class FuturesAccount:
     """
-    合约/期货账户，类似如下的一个2级字典
+    合约/期货账户，类似如下的一个3级字典
             {
             "tushare" : {
-                "btc" : {
-                    "action" : "sell",
+                "btc" : [
+                    {"action" : "sell",
                     "price" : 1000,
-                    "value" : 100
-                    },
+                    "value" : 100}'
+                     {"action" : "buy",
+                    "price" : 1000,
+                    "value" : 100}'
+                    ],
             }
         }
     """
@@ -82,7 +85,8 @@ class Account:
             print("exchange: " + key)
             for i in self.futures_account.account[key]:
                 print("object: " + i)
-                print("action: {}, price: {}, value: {}".
-                      format(self.futures_account.account[key][i]['action'],
-                             self.futures_account.account[key][i]['price'],
-                             self.futures_account.account[key][i]['value']))
+                for j in self.futures_account.account[key][i]:
+                    print("action: {}, price: {}, value: {}".
+                          format(self.futures_account.account[key][i][j]['action'],
+                                 self.futures_account.account[key][i][j]['price'],
+                                 self.futures_account.account[key][i][j]['value']))
