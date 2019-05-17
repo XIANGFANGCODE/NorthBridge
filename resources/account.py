@@ -47,19 +47,21 @@ class Account:
         self.spot_account = SpotAccount()
         self.futures_account = FuturesAccount()
 
-    def get_account(self, exchange, datetime, object, start_account=100000):
+    def get_account(self, exchange, datetime, *args):
         """
         获取一个测试或真实账户
         :param exchange: 交易所
         :param datetime: 账户快照日期
-        :param start_account: 测试账户初始金额，数字货币统一用USTD计算，股票期货股票用CNY计算
+        :param *args:
+        test模式 args[0] 基准货币类型，数字货币统一用USTD计算，股票期货股票用CNY计算
+                args[1] 为测试账户初始金额
         :return: Account类
         """
         self.datetime = datetime
         if self.mode == 'test':
-            self.spot_account, _ = self._get_test_account(exchange, object, start_account)
+            self.spot_account, self.futures_account = self._get_test_account(exchange, args[0], args[1])
         elif self.mode == 'real':
-            self.spot_account, _ = self._get_real_account(exchange)
+            self.spot_account, self.futures_account = self._get_real_account(exchange)
         else:
             logging.error("account has no mode {}.".format(self.mode))
         return self

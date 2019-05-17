@@ -92,7 +92,9 @@ def get_value_from_dict(dict, *args):
 
 # ID类型
 ID_TYPE = {
-    'signal': 1000000
+    'signal': 1000000,
+    'order': 2000000,
+    'transaction': 3000000
 }
 
 # tushare pandas返回数据列顺序

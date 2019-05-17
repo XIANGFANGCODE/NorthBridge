@@ -42,10 +42,10 @@ class NorthBridge(Resource):
             return evaluator
 
         account = Account(mode)
-        account.get_account(exchange=args['exchange'],
-                            datetime=signals[0].datetime,   # 从第一个信号开始
-                            object=BASIC_CURRENCY[OBJECT_TYPE[args['object']]],
-                            start_account=config['start_account'])
+        account.get_account(args['exchange'],
+                            signals[0].datetime,   # 从第一个信号开始
+                            BASIC_CURRENCY[OBJECT_TYPE[args['object']]],
+                            config['start_account'])
 
 
 

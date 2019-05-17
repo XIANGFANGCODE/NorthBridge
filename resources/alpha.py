@@ -64,14 +64,14 @@ class Alpha:
             # 上一次的移动均线有值时才能进行比较
             if pre_short_ma > 0 and pre_long_ma > 0:
                 if pre_short_ma <= pre_long_ma and short_ma > long_ma:
-                    signal = SignalMA(get_id('signal'), exchange, object, 'buy',
+                    signal = SignalMA(exchange, object, 'buy',
                                       df.iloc[i, TUSHARE_DATA_TYPE['price']],
                                       df.iloc[i, TUSHARE_DATA_TYPE['date']],
                                       pre_short_ma, pre_long_ma,
                                       short_ma,long_ma)
                     signals.append(signal)
                 elif pre_short_ma >= pre_long_ma and short_ma < long_ma:
-                    signal = SignalMA(get_id('signal'), exchange, object, 'sell',
+                    signal = SignalMA( exchange, object, 'sell',
                                       df.iloc[i, TUSHARE_DATA_TYPE['price']],
                                       df.iloc[i, TUSHARE_DATA_TYPE['date']],
                                       pre_short_ma, pre_long_ma,
