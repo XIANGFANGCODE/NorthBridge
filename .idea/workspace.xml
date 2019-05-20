@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec2eaea6-fc7c-4df5-9141-6f1265622f80" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/trade.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/transaction.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/scaffold.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/scaffold.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/account.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/account.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/alpha.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/alpha.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/northbridge.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/northbridge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config" beforeDir="false" afterPath="$PROJECT_DIR$/config/config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/order.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/order.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/signal.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/signal.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_account.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_account.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_order.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_order.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/trade.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/trade.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/transaction.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/transaction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/.pytest_cache/v/cache/lastfailed" beforeDir="false" afterPath="$PROJECT_DIR$/test/.pytest_cache/v/cache/lastfailed" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/.pytest_cache/v/cache/nodeids" beforeDir="false" afterPath="$PROJECT_DIR$/test/.pytest_cache/v/cache/nodeids" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_noting.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_noting.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +23,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/account.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="23" column="26" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="26" />
+            <state relative-caret-position="-1720">
+              <caret line="27" column="35" lean-forward="true" selection-start-line="22" selection-start-column="16" selection-end-line="27" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -34,8 +32,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/alpha.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2196">
-              <caret line="8" column="36" lean-forward="true" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+            <state relative-caret-position="-1468">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -44,22 +42,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/scaffold.py">
+        <entry file="file://$PROJECT_DIR$/resources/conveyor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="96" column="16" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="16" />
+            <state relative-caret-position="-136">
+              <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#0#51#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/order.py">
+        <entry file="file://$PROJECT_DIR$/resources/evaluator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="8" column="74" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="74" />
+            <state relative-caret-position="216">
+              <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -67,22 +65,31 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/transaction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-136">
-              <caret line="138" column="19" lean-forward="true" selection-start-line="138" selection-start-column="19" selection-end-line="138" selection-end-column="19" />
+            <state relative-caret-position="2622">
+              <caret line="107" column="29" selection-start-line="107" selection-start-column="15" selection-end-line="107" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/northbridge.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="620">
+              <caret line="47" column="52" lean-forward="true" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
               <folding>
-                <element signature="e#1#30#0" expanded="true" />
+                <element signature="e#0#51#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/trade.py">
+        <entry file="file://$PROJECT_DIR$/resources/oceanexplorer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="-114">
+              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
               <folding>
-                <element signature="e#0#29#0" expanded="true" />
+                <element signature="e#0#20#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -91,43 +98,28 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/signal.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2160">
-              <caret line="60" column="10" lean-forward="true" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_order.py">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="656">
-              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
+              <caret line="60" column="10" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_alpha.py">
+        <entry file="file://$PROJECT_DIR$/resources/order.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-6630">
+              <caret line="77" column="41" lean-forward="true" selection-start-line="77" selection-start-column="41" selection-end-line="77" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_account.py">
+        <entry file="file://$PROJECT_DIR$/resources/trade.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="24" />
+            <state relative-caret-position="570">
+              <caret line="167" column="26" lean-forward="true" selection-start-line="167" selection-start-column="26" selection-end-line="167" selection-end-column="26" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#1#36#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -159,6 +151,7 @@
       <find>done</find>
       <find>filled</find>
       <find>deal</find>
+      <find>futures_price</find>
     </findStrings>
     <replaceStrings>
       <replace>amount_of_</replace>
@@ -183,22 +176,22 @@
         <option value="$PROJECT_DIR$/resources/evaluator.py" />
         <option value="$PROJECT_DIR$/test/test_ocreanexplorer.py" />
         <option value="$PROJECT_DIR$/resources/oceanexplorer.py" />
-        <option value="$PROJECT_DIR$/config/config" />
         <option value="$PROJECT_DIR$/config/exchange_config" />
         <option value="$PROJECT_DIR$/test/test_alpha.py" />
         <option value="$PROJECT_DIR$/test/test_scaffold.py" />
-        <option value="$PROJECT_DIR$/test/test_noting.py" />
         <option value="$PROJECT_DIR$/test/test_account.py" />
         <option value="$PROJECT_DIR$/resources/account.py" />
         <option value="$PROJECT_DIR$/resources/northbridge.py" />
         <option value="$PROJECT_DIR$/test/test_order.py" />
         <option value="$PROJECT_DIR$/resources/alpha.py" />
         <option value="$PROJECT_DIR$/resources/signal.py" />
-        <option value="$PROJECT_DIR$/resources/order.py" />
         <option value="$PROJECT_DIR$/resources/Trade.py" />
-        <option value="$PROJECT_DIR$/resources/trade.py" />
-        <option value="$PROJECT_DIR$/common/scaffold.py" />
+        <option value="$PROJECT_DIR$/config/config" />
         <option value="$PROJECT_DIR$/resources/transaction.py" />
+        <option value="$PROJECT_DIR$/common/scaffold.py" />
+        <option value="$PROJECT_DIR$/resources/order.py" />
+        <option value="$PROJECT_DIR$/test/test_noting.py" />
+        <option value="$PROJECT_DIR$/resources/trade.py" />
       </list>
     </option>
   </component>
@@ -274,7 +267,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.pytest in test_ocreanexplorer.py">
+  <component name="RunManager" selected="Python tests.pytest for test_noting.MyTestCase.test_something">
     <configuration name="oceanexplorer" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="northbridge" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -317,25 +310,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="pytest for test_noting.MyTestCase.test_something" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="northbridge" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="E:\NorthBridge\test\test_app.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_noting.MyTestCase.test_something&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in test_noting.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="northbridge" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_noting.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="pytest in test_ocreanexplorer.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
@@ -355,10 +357,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest for test_noting.MyTestCase.test_something" />
+        <item itemvalue="Python tests.pytest in test_noting.py" />
         <item itemvalue="Python tests.pytest in test_ocreanexplorer.py" />
         <item itemvalue="Python.scaffold" />
         <item itemvalue="Python.oceanexplorer" />
-        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -385,17 +388,29 @@
     <history-entry file="pytest_in_test_ocreanexplorer_py - 2019.05.07 at 16h 10m 46s.xml">
       <configuration name="pytest in test_ocreanexplorer.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="pytest_in_test_noting_py - 2019.05.20 at 15h 20m 57s.xml">
+      <configuration name="pytest in test_noting.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_noting_py - 2019.05.20 at 15h 21m 07s.xml">
+      <configuration name="pytest in test_noting.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_test_noting_MyTestCase_test_something - 2019.05.20 at 15h 21m 34s.xml">
+      <configuration name="pytest for test_noting.MyTestCase.test_something" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_test_noting_MyTestCase_test_something - 2019.05.20 at 15h 21m 43s.xml">
+      <configuration name="pytest for test_noting.MyTestCase.test_something" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1548999" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0890411" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5167931" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.51626897" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -421,13 +436,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="29">
           <caret line="592" column="8" selection-start-line="592" selection-start-column="8" selection-end-line="592" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/configparser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="1188" column="6" selection-start-line="1188" selection-start-column="6" selection-end-line="1188" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -506,23 +514,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/conveyor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/evaluator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_ocreanexplorer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-8">
@@ -537,16 +528,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/oceanexplorer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -577,60 +558,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_noting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/typing.pyi">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12420">
-          <caret line="348" column="8" selection-start-line="348" selection-start-column="8" selection-end-line="348" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="15" column="66" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="66" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-950497877/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="4660" lean-forward="true" selection-start-line="4660" selection-end-line="4660" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="1" column="13" selection-start-line="1" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/northbridge.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="47" column="52" lean-forward="true" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_order.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -645,74 +578,153 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/configparser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="763" column="8" selection-start-line="763" selection-start-column="8" selection-end-line="763" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/typing.pyi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="348" column="8" selection-start-line="348" selection-start-column="8" selection-end-line="348" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_account.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
-          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="24" />
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="24" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/alpha.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2196">
-          <caret line="8" column="36" lean-forward="true" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/scaffold.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="96" column="16" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="16" />
+        <state relative-caret-position="-30">
+          <caret line="75" column="4" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="4" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/trade.py">
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-950497877/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="82">
+          <caret line="4158" column="6" selection-start-line="4158" selection-start-column="6" selection-end-line="4158" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_noting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_order.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="40" column="28" lean-forward="true" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/account.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1720">
+          <caret line="27" column="35" lean-forward="true" selection-start-line="22" selection-start-column="16" selection-end-line="27" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/alpha.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1468">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/signal.py">
+    <entry file="file://$PROJECT_DIR$/resources/conveyor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2160">
-          <caret line="60" column="10" lean-forward="true" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
+        <state relative-caret-position="-136">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/evaluator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/northbridge.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="47" column="52" lean-forward="true" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/oceanexplorer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-114">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/order.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="8" column="74" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="74" />
+        <state relative-caret-position="-6630">
+          <caret line="77" column="41" lean-forward="true" selection-start-line="77" selection-start-column="41" selection-end-line="77" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/account.py">
+    <entry file="file://$PROJECT_DIR$/resources/signal.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="26" />
+        <state relative-caret-position="656">
+          <caret line="60" column="10" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/trade.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="167" column="26" lean-forward="true" selection-start-line="167" selection-start-column="26" selection-end-line="167" selection-end-column="26" />
+          <folding>
+            <element signature="e#1#36#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/transaction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="138" column="19" lean-forward="true" selection-start-line="138" selection-start-column="19" selection-end-line="138" selection-end-column="19" />
-          <folding>
-            <element signature="e#1#30#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="2622">
+          <caret line="107" column="29" selection-start-line="107" selection-start-column="15" selection-end-line="107" selection-end-column="29" />
         </state>
       </provider>
     </entry>

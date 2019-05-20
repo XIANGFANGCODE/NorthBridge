@@ -1,3 +1,5 @@
 {
+  "test_noting.py": true,
+  "test_noting.py::MyTestCase": true,
   "test_ocreanexplorer.py": true
 }

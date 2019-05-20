@@ -5,8 +5,8 @@ import logging
 
 
 class Order:
-    def __init__(self, id, exchange, object, object_type, object_action, amount_of_object,
-                 price, amount_of_basic_currency, datetime, futures_action=''):
+    def __init__(self,exchange, object, object_type, object_action, amount_of_object,
+                 price, amount_of_basic_currency, datetime, futures_action='', futures_price=0):
         """
         订单类，描述如何向交易所下订单
         注意 order不是成交情况
@@ -20,6 +20,7 @@ class Order:
         :param price: 买卖标的价格
         :param amount_of_basic_currency: 折合基准货币金额，加密货币为ustd，股票期货期权为CNY
         :param datetime: 订单时间
+        :param futures_price: 若标的为合约，标明买入价
         """
         self.id = get_id('order')
         self.exchange = exchange
@@ -31,6 +32,7 @@ class Order:
         self.amount_of_basic_currency = amount_of_basic_currency
         self.datetime = datetime
         self.futures_action = futures_action
+        self.futures_price = futures_price
 
     @staticmethod
     def create_orders(mode, trade_limit, account, signal, **kw):
@@ -229,7 +231,8 @@ class Order:
                       price=signal.price,
                       amount_of_basic_currency=amount_of_basic_currency,
                       datetime=signal.datetime,
-                      futures_action=signal.action)
+                      futures_action=signal.action,
+                      futures_price=signal.price)
         return order
 
     @staticmethod
@@ -245,9 +248,9 @@ class Order:
                 future.get('price') < 0 or future.get('value') <= 0:
             return None, 0
         if future.get('action') == 'sell':
-            amount_of_basic_currency = (future.price * future.value) - (signal.price - future.price) * future.value
+            amount_of_basic_currency = (future.get('price') * future.get('value')) - (signal.price - future.get('price')) * future.get('value')
         else:
-            amount_of_basic_currency = (future.price * future.value) + (signal.price - future.price) * future.value
+            amount_of_basic_currency = (future.get('price') * future.get('value')) + (signal.price - future.get('price')) * future.get('value')
         order = Order(exchange=signal.exchange,
                       object=signal.object,
                       object_type='futures',
@@ -256,7 +259,8 @@ class Order:
                       price=signal.price,
                       amount_of_basic_currency=amount_of_basic_currency,
                       datetime=signal.datetime,
-                      futures_action=future.action)
+                      futures_action=future.get('action'),
+                      futures_price=future.get('price'))
         return order, amount_of_basic_currency
 
     def desc(self):

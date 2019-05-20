@@ -1,24 +1,6 @@
-from resources.order import *
-from resources.account import *
 import sys
 sys.path.append("..")
 from common.scaffold import *
-import logging
-
-"""
-订单类，描述如何向交易所下订单
-注意 order不是成交情况
-:param id: order id
-:param exchange: 交易所
-:param object: 标的
-:param object_type: 标的类型 spot 或 futures
-:param object_action: 交易方向 buy 或者 sell
-:param amount_of_object: 买卖标的数量
-:param futures_action: 若标的为合约，标明是空还是多
-:param price: 买卖标的价格
-:param amount_of_basic_currency: 折合基准货币金额，加密货币为ustd，股票期货期权为CNY
-:param datetime: 订单时间
-"""
 
 class Transaction:
     """

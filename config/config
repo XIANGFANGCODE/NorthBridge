@@ -8,4 +8,8 @@ moving_average_long = 30
 [account]
 start_account = 100000
 
+[fee]
+tushare_test_fee = 0.02
+
+
 

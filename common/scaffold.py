@@ -31,6 +31,9 @@ def parse_config():
     # tushare
     config['tushare_token'] = cf.get('tushare', 'tushare_token')
 
+    # fee
+    config['tushare_test_fee'] = cf.get('fee', 'tushare_test_fee')
+
     return config
 
 
@@ -94,7 +97,8 @@ def get_value_from_dict(dict, *args):
 ID_TYPE = {
     'signal': 1000000,
     'order': 2000000,
-    'transaction': 3000000
+    'transaction': 3000000,
+    'trade': 4000000
 }
 
 # tushare pandas返回数据列顺序
