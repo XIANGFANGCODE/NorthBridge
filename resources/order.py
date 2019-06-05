@@ -48,14 +48,14 @@ class Order:
         # 合法性检查
         orders = list()
         if mode == 'allin':
-            orders = Order._create_orders_by_allin(trade_limit, account, signal)
+            orders = Order._create_orders_by_allin(trade_limit, account, signal, **kw)
         else:
             logging.error('create_orders has no mode: '.format(mode))
 
         return orders
 
     @staticmethod
-    def _create_orders_by_allin(trade_limit, account, signal):
+    def _create_orders_by_allin(trade_limit, account, signal, **kwargs):
         """
         All in 下单
         :param trade_limit: 交易限制（只做多、只做空或者同时都能做）
@@ -70,7 +70,7 @@ class Order:
                 # 买现货
                 basic_currency = get_basic_currency(signal.object)
                 basic_currency_in_account = get_value_from_dict(account.spot_account.account, signal.exchange,
-                                                                basic_currency)
+                                                                basic_currency, 'value')
                 if basic_currency_in_account is None or basic_currency_in_account < 1:
                     logging.info('No {} in account of exchange {}.'.format(basic_currency, signal.exchange))
                 else:
@@ -90,14 +90,18 @@ class Order:
                             if order is not None:
                                 orders.append(order)
                                 # 2. 平仓金额买现货
-                                if basic_currency_by_sell is not None and basic_currency_by_sell > 1:
-                                    order = Order._buy_spot(account, signal, basic_currency_by_sell)
-                                    if order is not None:
-                                        orders.append(order)
+                                # 需预扣手续费
+                                if basic_currency_by_sell is not None:
+                                    fee = kwargs.get('fee', 0)
+                                    basic_currency_by_sell = float_mul(basic_currency_by_sell, (1 - fee))
+                                    if basic_currency_by_sell > 1:
+                                        order = Order._buy_spot(account, signal, basic_currency_by_sell)
+                                        if order is not None:
+                                            orders.append(order)
                 # 3. 原有账户余额买现货
                 basic_currency = get_basic_currency(signal.object)
                 basic_currency_in_account = get_value_from_dict(account.spot_account.account, signal.exchange,
-                                                                basic_currency)
+                                                                basic_currency, 'value')
                 if basic_currency_in_account is None or basic_currency_in_account < 1:
                     logging.info('No {} in account of exchange {}.'.format(basic_currency, signal.exchange))
                 else:
@@ -122,7 +126,7 @@ class Order:
                 # 开空仓合约
                 basic_currency = get_basic_currency(signal.object)
                 basic_currency_in_account = get_value_from_dict(account.spot_account.account, signal.exchange,
-                                                                basic_currency)
+                                                                basic_currency, 'value')
                 if basic_currency_in_account is None or basic_currency_in_account < 1:
                     logging.info('No {} in account of exchange {}.'.format(basic_currency, signal.exchange))
                 else:
@@ -131,7 +135,8 @@ class Order:
                         orders.append(order)
             elif trade_limit == 'both':
                 # 卖现货
-                spot = get_value_from_dict(account.spot_account.account, signal.exchange, signal.object)
+                spot = get_value_from_dict(account.spot_account.account, signal.exchange,
+                                           signal.object, 'value')
                 if spot is None or spot <= 0:
                     logging.info('No spot {} in account of exchange {}.'.format(signal.object, signal.exchange))
                 else:
@@ -140,22 +145,26 @@ class Order:
                         orders.append(order)
                         if basic_currency_by_sell is not None and basic_currency_by_sell > 1:
                             # 开空仓合约
-                            order = Order._buy_futures(account, signal, basic_currency_by_sell)
-                            if order is not None:
-                                orders.append(order)
+                            if basic_currency_by_sell is not None:
+                                fee = kwargs.get('fee', 0)
+                                basic_currency_by_sell = float_mul(basic_currency_by_sell, (1 - fee))
+                                if basic_currency_by_sell > 1:
+                                    order = Order._buy_futures(account, signal, basic_currency_by_sell)
+                                    if order is not None:
+                                        orders.append(order)
                 # 开空仓合约
                 basic_currency = get_basic_currency(signal.object)
                 basic_currency_in_account = get_value_from_dict(account.spot_account.account, signal.exchange,
-                                                                basic_currency)
-                if basic_currency_in_account is None:
-                    logging.info('No {} in account of exchange {}.'.format(basic_currency, signal.exchange))
+                                                                basic_currency, 'value')
+                if basic_currency_in_account is None or basic_currency_in_account < 1:
+                    logging.info('No sufficient {} in account of exchange {}.'.format(basic_currency, signal.exchange))
                 else:
                     order = Order._buy_futures(account, signal, basic_currency_in_account)
                     if order is not None:
                         orders.append(order)
             else:
                 # 卖现货
-                spot = get_value_from_dict(account.spot_account.account, signal.exchange, signal.object)
+                spot = get_value_from_dict(account.spot_account.account, signal.exchange, signal.object, 'value')
                 if spot is None or spot <= 0:
                     logging.info('No spot {} in account of exchange {}.'.format(signal.object, signal.exchange))
                 else:
@@ -177,7 +186,9 @@ class Order:
         if basic_currency_in_account < 1:
             logging.info('Not sufficient {}.'.format(basic_currency_in_account))
             return None
-        amount_of_object = float('%.2f' % (basic_currency_in_account / signal.price))
+        amount_of_object = tranc_float(basic_currency_in_account / signal.price, 4)
+        if amount_of_object < 0.0001:
+            return None
         amount_of_basic_currency = amount_of_object * signal.price
         order = Order(exchange=signal.exchange,
                       object=signal.object,
@@ -221,7 +232,9 @@ class Order:
         if basic_currency_in_account < 1:
             logging.info('Not sufficient {}.'.format(basic_currency_in_account))
             return None
-        amount_of_object = float('%.2f' % (basic_currency_in_account / signal.price))
+        amount_of_object = tranc_float(basic_currency_in_account / signal.price,4 )
+        if amount_of_object < 0.0001:
+            return None
         amount_of_basic_currency = amount_of_object * signal.price
         order = Order(exchange=signal.exchange,
                       object=signal.object,

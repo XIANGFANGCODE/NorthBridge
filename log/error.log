@@ -5,3 +5,12 @@
 2019-05-15 09:21:28,037 - test_scaffold.py - test_logging[line:18] - ERROR : it is error
 2019-05-15 17:52:34,751 - test_scaffold.py - test_logging[line:18] - ERROR : it is error
 2019-05-15 17:52:49,470 - test_scaffold.py - test_logging[line:18] - ERROR : it is error
+2019-05-23 14:45:51,238 - trade.py - _test_trade[line:150] - ERROR : No sufficient futures : huobi, of exchange: btc
+2019-05-23 14:54:25,616 - trade.py - _test_trade[line:150] - ERROR : No sufficient futures : huobi, of exchange: btc
+2019-05-23 14:55:13,534 - trade.py - _test_trade[line:150] - ERROR : No sufficient futures : huobi, of exchange: btc
+2019-05-23 15:03:40,707 - trade.py - _test_trade[line:150] - ERROR : No sufficient futures : huobi, of exchange: btc
+2019-05-23 15:06:26,450 - trade.py - _test_trade[line:150] - ERROR : No sufficient futures : huobi, of exchange: btc
+2019-05-29 17:39:18,231 - order.py - create_orders[line:53] - ERROR : create_orders has no mode: 
+2019-05-29 17:39:18,233 - order.py - create_orders[line:53] - ERROR : create_orders has no mode: 
+2019-05-29 17:39:18,234 - order.py - create_orders[line:53] - ERROR : create_orders has no mode: 
+2019-05-29 17:39:18,234 - order.py - create_orders[line:53] - ERROR : create_orders has no mode: 

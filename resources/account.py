@@ -6,13 +6,19 @@ class SpotAccount:
     数据模型为一个2级字典
             {
             "tushare" : {
-                "btc" : 100,
-                "eth" : 200
+                "btc" : {
+                    "price": 10,  #为方便计算收益率，存入此值
+                    "value" : 100
+                    },
+                "ustd" : {
+                    "price": 1,
+                    "value" : 100
                 }
         }
     """
     def __init__(self):
         self.account = dict()
+
 
 class FuturesAccount:
     """
@@ -46,6 +52,7 @@ class Account:
         self.datetime = ""
         self.spot_account = SpotAccount()
         self.futures_account = FuturesAccount()
+        self.ustd_unit = 1
 
     def get_account(self, exchange, datetime, *args):
         """
@@ -69,7 +76,9 @@ class Account:
     def _get_test_account(self, exchange, object, start_account):
         # 测试账户只有现货基准币种
         self.spot_account.account[exchange] = dict()
-        self.spot_account.account[exchange][object] = start_account
+        self.spot_account.account[exchange][object] = dict()
+        self.spot_account.account[exchange][object]['price'] = self.ustd_unit
+        self.spot_account.account[exchange][object]['value'] = start_account
         return self.spot_account, self.futures_account
 
     def _get_real_account(self, exchange):
@@ -81,7 +90,9 @@ class Account:
         for key in self.spot_account.account:
             print("exchange: " + key)
             for i in self.spot_account.account[key]:
-                print("object: {}, value: {}".format(i, self.spot_account.account[key][i]))
+                print("object: {} ".format(i))
+                print("price: {}, value: {}".format(self.spot_account.account[key][i]['price'],
+                                                    self.spot_account.account[key][i]['value']))
         print("futures account: ")
         for key in self.futures_account.account:
             print("exchange: " + key)
@@ -89,6 +100,6 @@ class Account:
                 print("object: " + i)
                 for j in self.futures_account.account[key][i]:
                     print("action: {}, price: {}, value: {}".
-                          format(self.futures_account.account[key][i][j]['action'],
-                                 self.futures_account.account[key][i][j]['price'],
-                                 self.futures_account.account[key][i][j]['value']))
+                          format(j['action'],
+                                 j['price'],
+                                 j['value']))

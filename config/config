@@ -10,6 +10,7 @@ start_account = 100000
 
 [fee]
 tushare_test_fee = 0.02
+huobi_test_fee = 0.02
 
 
 

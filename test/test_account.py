@@ -9,7 +9,8 @@ class MyTestCase(unittest.TestCase):
         account = Account('test')
         account.get_account('tushare', '20190501', 'ustd',  100000)
         account.desc()
-        self.assertEqual(account.spot_account.account['tushare']['ustd'], 100000)
+        self.assertEqual(account.spot_account.account['tushare']['ustd']['value'], 100000)
+        self.assertEqual(account.spot_account.account['tushare']['ustd']['price'], 1)
 
 
 if __name__ == '__main__':

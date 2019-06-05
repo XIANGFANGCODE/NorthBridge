@@ -24,16 +24,16 @@ class Transaction:
         :param fee: 手续费
         """
         self.id = get_id('transaction')
-        self.exchange = exchange,
-        self.id_from_exchange = id_from_exchange,
-        self.object = object,
-        self.object_type = object_type,
-        self.object_action = object_action,
-        self.amount_of_object = amount_of_object,
-        self.amount_of_basic_currency = amount_of_basic_currency,
-        self.datetime = datetime,
-        self.deal_amount_of_object = deal_amount_of_object,
-        self.deal_amount_of_basic_currency = deal_amount_of_basic_currency,
+        self.exchange = exchange
+        self.id_from_exchange = id_from_exchange
+        self.object = object
+        self.object_type = object_type
+        self.object_action = object_action
+        self.amount_of_object = amount_of_object
+        self.amount_of_basic_currency = amount_of_basic_currency
+        self.datetime = datetime
+        self.deal_amount_of_object = deal_amount_of_object
+        self.deal_amount_of_basic_currency = deal_amount_of_basic_currency
         self.fee = fee
 
     def desc(self):

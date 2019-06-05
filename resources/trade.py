@@ -58,35 +58,37 @@ class Trade:
                 amount_of_object=order.amount_of_object,
                 amount_of_basic_currency=order.amount_of_basic_currency,
                 datetime=order.datetime,
-                deal_amount_of_object=((1 - fee) * order.amount_of_object),
-                deal_amount_of_basic_currency=((1 - fee) * order.amount_of_basic_currency),
+                deal_amount_of_object=float_mul((1 - fee), order.amount_of_object),
+                deal_amount_of_basic_currency=float_mul((1 - fee), order.amount_of_basic_currency),
                 fee=fee * order.amount_of_basic_currency,
                 price=order.price,
                 deal_price=order.price
             )
             # 修改account信息
             basic_currency = get_basic_currency(transaction.object)
-            if transaction.object_type == 'buy':    # buy spot
-                account.spot_account.account[transaction.exchange][basic_currency] = \
-                    account.spot_account.account[transaction.exchange][basic_currency] - \
+            if transaction.object_action == 'buy':    # buy spot
+                account.spot_account.account[transaction.exchange][basic_currency]['value'] -= \
                     transaction.amount_of_basic_currency
                 if get_value_from_dict(account.spot_account.account, transaction.exchange, transaction.object) is None:
-                    account.spot_account.account[transaction.exchange][transaction.object] = \
-                        transaction.deal_amount_of_object
+                    account.spot_account.account[transaction.exchange][transaction.object] = dict({
+                        'price' : transaction.deal_price,
+                        'value' : transaction.deal_amount_of_object
+                    })
                 else:
-                    account.spot_account.account[transaction.exchange][transaction.object] = \
-                        account.spot_account.account[transaction.exchange][transaction.object] + \
+                    account.spot_account.account[transaction.exchange][transaction.object]['value'] += \
                         transaction.deal_amount_of_object
+                    account.spot_account.account[transaction.exchange][transaction.object]['price'] = \
+                        transaction.deal_price
             else:   #sell spot
-                account.spot_account.account[transaction.exchange][transaction.object] = \
-                    account.spot_account.account[transaction.exchange][transaction.object] - \
+                account.spot_account.account[transaction.exchange][transaction.object]['value'] -= \
                     transaction.amount_of_object
                 if get_value_from_dict(account.spot_account.account, transaction.exchange, basic_currency) is None:
-                    account.spot_account.account[transaction.exchange][basic_currency] = \
-                        transaction.deal_amount_of_basic_currency
+                    account.spot_account.account[transaction.exchange][basic_currency] = dict({
+                        'price' : BASIC_CURRENCY_UNIT,
+                        'value' : transaction.deal_amount_of_basic_currency
+                    })
                 else:
-                    account.spot_account.account[transaction.exchange][basic_currency] = \
-                        account.spot_account.account[transaction.exchange][basic_currency] + \
+                    account.spot_account.account[transaction.exchange][basic_currency]['value'] += \
                         transaction.deal_amount_of_basic_currency
             return transaction, account
         elif order.object_type == 'futures':
@@ -99,8 +101,8 @@ class Trade:
                 amount_of_object=order.amount_of_object,
                 amount_of_basic_currency=order.amount_of_basic_currency,
                 datetime=order.datetime,
-                deal_amount_of_object=((1 - fee) * order.amount_of_object),
-                deal_amount_of_basic_currency=((1 - fee) * order.amount_of_basic_currency),
+                deal_amount_of_object=float_mul((1 - fee), order.amount_of_object),
+                deal_amount_of_basic_currency=float_mul((1 - fee), order.amount_of_basic_currency),
                 fee=fee * order.amount_of_basic_currency,
                 futures_action=order.futures_action,
                 futures_price=order.futures_price,
@@ -108,11 +110,12 @@ class Trade:
                 deal_price=order.price
             )
             basic_currency = get_basic_currency(transaction.object)
-            if transaction.object_type == 'buy':  # buy futures
-                account.spot_account.account[transaction.exchange][basic_currency] = \
-                    account.spot_account.account[transaction.exchange][basic_currency] - \
+            if transaction.object_action == 'buy':  # buy futures
+                account.spot_account.account[transaction.exchange][basic_currency]['value'] -= \
                     transaction.amount_of_basic_currency
                 if get_value_from_dict(account.futures_account.account, transaction.exchange, transaction.object) is None:
+                    if get_value_from_dict(account.futures_account.account, transaction.exchange) is None:
+                        account.futures_account.account[transaction.exchange] = dict()
                     account.futures_account.account[transaction.exchange][transaction.object] = list()
                     account.futures_account.account[transaction.exchange][transaction.object].append(
                         dict({'action': transaction.futures_action,
@@ -138,21 +141,25 @@ class Trade:
                 j = 0
                 for i in range(len(future_list)):
                     future = future_list[i]
-                    if future['action'] == transaction.futures_action and future['price'] == transaction.deal_price:
+                    if future['action'] == transaction.futures_action and future['price'] == transaction.futures_price:
                         future['value'] = future['value'] - transaction.amount_of_object
                         future_list[i] = future
                         j = 1
                         break
                 if j == 0:
                    logging.error("No sufficient futures : {}, of exchange: {}".format(transaction.exchange,
-                                                                                      transaction.object))
-                if get_value_from_dict(account.spot_account.account, transaction.exchange, basic_currency) is None:
-                    account.spot_account.account[transaction.exchange][basic_currency] = \
-                        transaction.deal_amount_of_basic_currency
+                                                                                     transaction.object))
                 else:
-                    account.spot_account.account[transaction.exchange][basic_currency] = \
-                        account.spot_account.account[transaction.exchange][basic_currency] + \
-                        transaction.deal_amount_of_basic_currency
+                    if get_value_from_dict(account.spot_account.account, transaction.exchange, basic_currency) is None:
+                        account.spot_account.account[transaction.exchange][basic_currency] = dict({
+                            'price': BASIC_CURRENCY_UNIT,
+                            'value': transaction.deal_amount_of_basic_currency
+                        })
+                    else:
+                        account.spot_account.account[transaction.exchange][basic_currency]['value'] += \
+                            transaction.deal_amount_of_basic_currency
+
+            account.datetime = transaction.datetime
             return transaction, account
         else:
             logging.error('order do not have object_type: {}'.format(order.object_type))

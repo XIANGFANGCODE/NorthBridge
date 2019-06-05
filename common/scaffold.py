@@ -24,15 +24,15 @@ def parse_config():
     # account
     config['start_account'] = cf.get('account', 'start_account')
 
+    # fee
+    config['tushare_test_fee'] = cf.get('fee', 'tushare_test_fee')
+
     d = path.join(path.dirname(path.dirname(path.realpath(__file__))), 'config', 'exchange_config') #获取交易所配置文件
     cf = configparser.ConfigParser()
     cf.read(d)
 
     # tushare
     config['tushare_token'] = cf.get('tushare', 'tushare_token')
-
-    # fee
-    config['tushare_test_fee'] = cf.get('fee', 'tushare_test_fee')
 
     return config
 
@@ -89,6 +89,16 @@ def get_value_from_dict(dict, *args):
             return value
     return value
 
+def float_mul(a,b):
+    return a * b
+    #return ((a * 10000) * (b * 10000)) / 100000000
+
+def tranc_float(f, n):
+    f_str = str(f)
+    index = f_str.find('.')
+    return float(f_str[: index+n+1])
+
+
 ################################################
 # 定义各类常量                                   #
 ################################################
@@ -118,5 +128,7 @@ OBJECT_TYPE = {
 BASIC_CURRENCY = {
     'crypto_currency': 'ustd'
 }
+
+BASIC_CURRENCY_UNIT = 1
 
 

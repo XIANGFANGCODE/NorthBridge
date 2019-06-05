@@ -12,3 +12,191 @@
 2019-05-15 17:52:34,751 - test_scaffold.py - test_logging - ERROR : it is error
 2019-05-15 17:52:49,470 - test_scaffold.py - test_logging - DEBUG : it is debug
 2019-05-15 17:52:49,470 - test_scaffold.py - test_logging - ERROR : it is error
+2019-05-23 14:45:51,234 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-05-23 14:45:51,237 - order.py - _buy_futures - INFO : Not sufficient 0.0.
+2019-05-23 14:45:51,238 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-05-23 14:45:51,238 - trade.py - _test_trade - ERROR : No sufficient futures : huobi, of exchange: btc
+2019-05-23 14:45:51,238 - order.py - _buy_futures - INFO : Not sufficient -968.2400000000016.
+2019-05-23 14:54:25,616 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-05-23 14:54:25,616 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-05-23 14:54:25,616 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-05-23 14:54:25,616 - trade.py - _test_trade - ERROR : No sufficient futures : huobi, of exchange: btc
+2019-05-23 14:54:25,619 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-05-23 14:55:13,533 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-05-23 14:55:13,533 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-05-23 14:55:13,534 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-05-23 14:55:13,534 - trade.py - _test_trade - ERROR : No sufficient futures : huobi, of exchange: btc
+2019-05-23 14:55:13,534 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-05-23 15:03:40,706 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-05-23 15:03:40,706 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-05-23 15:03:40,707 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-05-23 15:03:40,707 - trade.py - _test_trade - ERROR : No sufficient futures : huobi, of exchange: btc
+2019-05-23 15:03:40,707 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-05-23 15:06:26,449 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-05-23 15:06:26,450 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-05-23 15:06:26,450 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-05-23 15:06:26,450 - trade.py - _test_trade - ERROR : No sufficient futures : huobi, of exchange: btc
+2019-05-23 15:06:26,451 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-05-24 16:15:42,530 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-05-24 16:15:42,530 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-05-24 16:15:42,561 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-05-24 16:15:42,577 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-05-24 16:16:03,499 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-05-24 16:16:03,499 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-05-24 16:16:03,499 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-05-24 16:16:03,499 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-05-24 16:26:28,828 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-05-24 16:26:28,828 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-05-24 16:26:28,828 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-05-24 16:26:28,828 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-05-24 17:00:08,537 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-05-24 17:00:08,537 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-05-24 17:00:08,537 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-05-24 17:00:08,537 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-05-24 17:00:31,573 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-05-24 17:00:31,573 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-05-24 17:00:31,574 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-05-24 17:00:31,574 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-05-29 14:42:32,330 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-05-29 14:42:32,341 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-05-29 14:42:32,361 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-05-29 14:42:32,383 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-05-29 14:42:47,966 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-05-29 14:42:47,967 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-05-29 14:42:47,967 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-05-29 14:42:47,967 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-05-29 16:08:02,841 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-05-29 16:08:02,842 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-05-29 16:08:02,843 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-05-29 16:08:02,843 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-05-29 16:13:32,242 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-05-29 16:13:32,243 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-05-29 16:13:32,243 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-05-29 16:13:32,244 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-05-29 17:04:02,721 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-05-29 17:04:02,721 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-05-29 17:04:02,722 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-05-29 17:04:02,722 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-05-29 17:39:18,231 - order.py - create_orders - ERROR : create_orders has no mode: 
+2019-05-29 17:39:18,233 - order.py - create_orders - ERROR : create_orders has no mode: 
+2019-05-29 17:39:18,234 - order.py - create_orders - ERROR : create_orders has no mode: 
+2019-05-29 17:39:18,234 - order.py - create_orders - ERROR : create_orders has no mode: 
+2019-05-29 17:40:35,333 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 09:33:38,856 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 09:33:38,873 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 09:33:38,911 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-06-04 09:33:38,947 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 09:33:45,351 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 09:33:45,352 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 09:33:45,352 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-06-04 09:33:45,353 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 09:41:35,663 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 09:41:35,663 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 09:41:35,664 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-06-04 09:41:35,664 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 09:41:38,673 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 09:41:38,674 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 09:41:38,674 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-06-04 09:41:38,675 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 09:45:00,744 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 09:45:00,745 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 09:45:00,745 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-06-04 09:45:00,746 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 09:47:35,947 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 09:47:35,947 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 09:47:35,948 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-06-04 09:47:35,949 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 09:48:42,629 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 09:48:42,629 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 09:48:42,630 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-06-04 09:48:42,630 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 09:52:49,098 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 09:52:49,098 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 09:52:49,099 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-06-04 09:52:49,099 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 09:56:16,574 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 09:56:16,574 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 09:56:16,575 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-06-04 09:56:16,575 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 09:57:09,371 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 09:57:42,384 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 09:57:42,384 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 09:57:42,385 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-06-04 09:57:42,385 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:03:22,125 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 10:03:22,126 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:03:22,126 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-06-04 10:03:22,127 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:06:56,725 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 10:06:56,726 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:06:56,726 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-06-04 10:06:56,726 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:09:18,432 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 10:09:18,432 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:09:18,432 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-06-04 10:09:18,433 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:09:45,294 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 10:09:45,295 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:09:45,295 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-06-04 10:09:45,295 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:09:57,247 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 10:09:57,248 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:09:57,248 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-06-04 10:09:57,249 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:10:09,032 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 10:10:09,032 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:10:09,033 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-06-04 10:10:09,033 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:11:09,796 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 10:12:10,280 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 10:12:10,281 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:12:10,282 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-06-04 10:12:10,282 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:13:17,314 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 10:13:17,314 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:13:17,314 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-06-04 10:13:17,315 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:13:38,709 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 10:13:38,710 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:13:38,710 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-06-04 10:13:38,711 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:14:53,039 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 10:14:53,040 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:14:53,040 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-06-04 10:14:53,041 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:17:00,413 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 10:17:00,413 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:17:00,414 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-06-04 10:17:00,414 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:19:01,371 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 10:19:01,371 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:19:01,372 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-06-04 10:19:01,373 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:19:26,944 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 10:19:26,945 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:19:26,945 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-06-04 10:19:26,946 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:22:16,285 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 10:22:16,286 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:22:16,287 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-06-04 10:22:16,287 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:26:16,053 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 10:26:16,054 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:26:16,056 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-06-04 10:26:16,057 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:27:49,630 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 10:27:49,631 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:27:49,631 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-06-04 10:27:49,632 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:28:02,543 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 10:28:02,543 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 10:28:02,544 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-06-04 10:28:02,545 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 11:35:19,825 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 11:35:19,826 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 11:35:19,827 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-06-04 11:35:19,828 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 13:27:50,279 - order.py - _create_orders_by_allin - INFO : No futures btc in account of exchange huobi.
+2019-06-04 13:27:50,280 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.
+2019-06-04 13:27:50,280 - order.py - _create_orders_by_allin - INFO : No ustd in account of exchange huobi.
+2019-06-04 13:27:50,281 - order.py - _create_orders_by_allin - INFO : No sufficient ustd in account of exchange huobi.

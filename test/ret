@@ -1,0 +1,211 @@
+seq : 1 ------------------------------------
+order: 
+
+id is : 2000001, exchange is : huobi, object is : btc, object_type is : spot, object_action is : buy,amount_of_object is : 10.0, price is : 1, amount_of_basic_currency is : 10.0,datetime is : 20190522, futures_action is : 
+
+
+transaction: 
+
+id is : 3000001, exchange is : huobi, id_from_exchange is : 2000001, object is : btc, object_type is : spot,object_action is : buy, amount_of_object is : 10.0, amount_of_basic_currency is : 10.0,datetime is : 20190522, deal_amount_of_object is : 9.8, deal_amount_of_basic_currency is : 9.8,fee is : 0.2, price is : 1,  deal_price is : 1
+
+
+account: 
+
+mode: test, datetime: 20190522
+spot account: 
+exchange: huobi
+object: ustd 
+price: 1, value: 0.0
+object: btc 
+price: 1, value: 9.8
+futures account: 
+
+
+----------------------------------------------
+
+
+
+
+seq : 1 ------------------------------------
+order: 
+
+id is : 2000001, exchange is : huobi, object is : btc, object_type is : spot, object_action is : sell,amount_of_object is : 9.8, price is : 2, amount_of_basic_currency is : 19.6,datetime is : 20190523, futures_action is : 
+
+
+transaction: 
+
+id is : 3000001, exchange is : huobi, id_from_exchange is : 2000001, object is : btc, object_type is : spot,object_action is : sell, amount_of_object is : 9.8, amount_of_basic_currency is : 19.6,datetime is : 20190523, deal_amount_of_object is : 9.604000000000001, deal_amount_of_basic_currency is : 19.208000000000002,fee is : 0.392, price is : 2,  deal_price is : 2
+
+
+account: 
+
+mode: test, datetime: 20190522
+spot account: 
+exchange: huobi
+object: ustd 
+price: 1, value: 19.208000000000002
+object: btc 
+price: 1, value: 0.0
+futures account: 
+
+
+----------------------------------------------
+
+
+
+
+seq : 2 ------------------------------------
+order: 
+
+id is : 2000001, exchange is : huobi, object is : btc, object_type is : futures, object_action is : buy,amount_of_object is : 9.604, price is : 2, amount_of_basic_currency is : 19.208,datetime is : 20190523, futures_action is : sell
+
+
+transaction: 
+
+id is : 3000001, exchange is : huobi, id_from_exchange is : 2000001, object is : btc, object_type is : futures,object_action is : buy, amount_of_object is : 9.604, amount_of_basic_currency is : 19.208,datetime is : 20190523, deal_amount_of_object is : 9.411919999999999, deal_amount_of_basic_currency is : 18.823839999999997,fee is : 0.38416, futures_action is : sell, futures_price is : 2, price is : 2,  deal_price is : 2
+
+
+account: 
+
+mode: test, datetime: 20190523
+spot account: 
+exchange: huobi
+object: ustd 
+price: 1, value: 3.552713678800501e-15
+object: btc 
+price: 1, value: 0.0
+futures account: 
+exchange: huobi
+object: btc
+action: sell, price: 2, value: 9.411919999999999
+
+
+----------------------------------------------
+
+
+
+
+seq : 1 ------------------------------------
+order: 
+
+id is : 2000001, exchange is : huobi, object is : btc, object_type is : futures, object_action is : sell,amount_of_object is : 9.411919999999999, price is : 1, amount_of_basic_currency is : 28.235759999999996,datetime is : 20190524, futures_action is : sell
+
+
+transaction: 
+
+id is : 3000001, exchange is : huobi, id_from_exchange is : 2000001, object is : btc, object_type is : futures,object_action is : sell, amount_of_object is : 9.411919999999999, amount_of_basic_currency is : 28.235759999999996,datetime is : 20190524, deal_amount_of_object is : 9.223681599999999, deal_amount_of_basic_currency is : 27.671044799999994,fee is : 0.5647152, futures_action is : sell, futures_price is : 2, price is : 1,  deal_price is : 1
+
+
+account: 
+
+mode: test, datetime: 20190524
+spot account: 
+exchange: huobi
+object: ustd 
+price: 1, value: 27.671044799999997
+object: btc 
+price: 1, value: 0.0
+futures account: 
+exchange: huobi
+object: btc
+action: sell, price: 2, value: 0.0
+
+
+----------------------------------------------
+
+
+
+
+seq : 2 ------------------------------------
+order: 
+
+id is : 2000001, exchange is : huobi, object is : btc, object_type is : spot, object_action is : buy,amount_of_object is : 27.671, price is : 1, amount_of_basic_currency is : 27.671,datetime is : 20190524, futures_action is : 
+
+
+transaction: 
+
+id is : 3000001, exchange is : huobi, id_from_exchange is : 2000001, object is : btc, object_type is : spot,object_action is : buy, amount_of_object is : 27.671, amount_of_basic_currency is : 27.671,datetime is : 20190524, deal_amount_of_object is : 27.11758, deal_amount_of_basic_currency is : 27.11758,fee is : 0.55342, price is : 1,  deal_price is : 1
+
+
+account: 
+
+mode: test, datetime: 20190524
+spot account: 
+exchange: huobi
+object: ustd 
+price: 1, value: 4.479999999773554e-05
+object: btc 
+price: 1, value: 27.11758
+futures account: 
+exchange: huobi
+object: btc
+action: sell, price: 2, value: 0.0
+
+
+----------------------------------------------
+
+
+
+
+seq : 1 ------------------------------------
+order: 
+
+id is : 2000001, exchange is : huobi, object is : btc, object_type is : spot, object_action is : sell,amount_of_object is : 27.11758, price is : 2, amount_of_basic_currency is : 54.23516,datetime is : 20190525, futures_action is : 
+
+
+transaction: 
+
+id is : 3000001, exchange is : huobi, id_from_exchange is : 2000001, object is : btc, object_type is : spot,object_action is : sell, amount_of_object is : 27.11758, amount_of_basic_currency is : 54.23516,datetime is : 20190525, deal_amount_of_object is : 26.5752284, deal_amount_of_basic_currency is : 53.1504568,fee is : 1.0847032, price is : 2,  deal_price is : 2
+
+
+account: 
+
+mode: test, datetime: 20190524
+spot account: 
+exchange: huobi
+object: ustd 
+price: 1, value: 53.1505016
+object: btc 
+price: 1, value: 0.0
+futures account: 
+exchange: huobi
+object: btc
+action: sell, price: 2, value: 0.0
+
+
+----------------------------------------------
+
+
+
+
+seq : 2 ------------------------------------
+order: 
+
+id is : 2000001, exchange is : huobi, object is : btc, object_type is : futures, object_action is : buy,amount_of_object is : 26.5752, price is : 2, amount_of_basic_currency is : 53.1504,datetime is : 20190525, futures_action is : sell
+
+
+transaction: 
+
+id is : 3000001, exchange is : huobi, id_from_exchange is : 2000001, object is : btc, object_type is : futures,object_action is : buy, amount_of_object is : 26.5752, amount_of_basic_currency is : 53.1504,datetime is : 20190525, deal_amount_of_object is : 26.043695999999997, deal_amount_of_basic_currency is : 52.087391999999994,fee is : 1.063008, futures_action is : sell, futures_price is : 2, price is : 2,  deal_price is : 2
+
+
+account: 
+
+mode: test, datetime: 20190525
+spot account: 
+exchange: huobi
+object: ustd 
+price: 1, value: 0.00010160000000070113
+object: btc 
+price: 1, value: 0.0
+futures account: 
+exchange: huobi
+object: btc
+action: sell, price: 2, value: 26.043695999999997
+
+
+----------------------------------------------
+
+
+
+
